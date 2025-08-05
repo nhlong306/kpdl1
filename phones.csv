@@ -1,0 +1,11 @@
+brand,model,release_year,ram_gb,storage_gb,battery_mah,camera_mp,display_inches,os,price_usd
+Samsung,Galaxy S21,2021,8,128,4000,64,6.2,Android,799
+Apple,iPhone 13,2021,4,128,3240,12,6.1,iOS,799
+Xiaomi,Mi 11,2021,8,256,4600,108,6.8,Android,749
+Oppo,Find X3 Pro,2021,12,256,4500,50,6.7,Android,1099
+Vivo,X60 Pro,2021,12,256,4200,48,6.6,Android,899
+Samsung,Galaxy A52,2021,6,128,4500,64,6.5,Android,399
+Apple,iPhone 12,2020,4,64,2815,12,6.1,iOS,699
+Xiaomi,Redmi Note 10,2021,4,64,5000,48,6.43,Android,199
+Samsung,Galaxy Note 20,2020,8,256,4300,64,6.7,Android,999
+Apple,iPhone SE,2020,3,64,1821,12,4.7,iOS,399

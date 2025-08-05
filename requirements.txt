@@ -1,0 +1,1 @@
+streamlit\npandas\nplotly\nscikit-learn\nnumpy
