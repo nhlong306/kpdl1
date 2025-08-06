@@ -19,8 +19,14 @@ df = load_data()
 # Sidebar filters
 st.sidebar.header("Bộ lọc")
 brands = st.sidebar.multiselect("Chọn hãng", options=sorted(df['Hãng'].unique()), default=sorted(df['Hãng'].unique()))
-year_range = st.sidebar.slider("Năm ra mắt", int(df['Năm ra mắt'].min()), int(df['Năm ra mắt'].max()), 
-                                (int(df['Năm ra mắt'].min()), int(df['Năm ra mắt'].max())))
+
+# Sửa thanh lọc năm ra mắt từ 2020 đến 2025
+year_range = st.sidebar.slider(
+    "Năm ra mắt",
+    2020, 2025, 
+    (2020, 2025)
+)
+
 ram_range = st.sidebar.slider("RAM (GB)", int(df['RAM (GB)'].min()), int(df['RAM (GB)'].max()), 
                                (int(df['RAM (GB)'].min()), int(df['RAM (GB)'].max())))
 price_range = st.sidebar.slider("Giá (VNĐ)", int(df['Giá (VNĐ)'].min()), int(df['Giá (VNĐ)'].max()), 
@@ -92,7 +98,7 @@ with st.form("predict_form"):
     battery = st.number_input("Pin (mAh)", min_value=500, max_value=10000, value=4000)
     camera = st.number_input("Camera (MP)", min_value=1, max_value=200, value=64)
     display = st.number_input("Màn hình (inch)", min_value=3.0, max_value=8.0, value=6.5, step=0.1)
-    year = st.number_input("Năm ra mắt", min_value=2000, max_value=2030, value=2025)
+    year = st.number_input("Năm ra mắt", min_value=2000, max_value=2030, value=2021)
     submit = st.form_submit_button("Dự đoán")
     if submit:
         input_data = np.array([[ram, storage, battery, camera, display, year]])
