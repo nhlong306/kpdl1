@@ -92,7 +92,7 @@ with st.form("predict_form"):
     battery = st.number_input("Pin (mAh)", min_value=500, max_value=10000, value=4000)
     camera = st.number_input("Camera (MP)", min_value=1, max_value=200, value=64)
     display = st.number_input("Màn hình (inch)", min_value=3.0, max_value=8.0, value=6.5, step=0.1)
-    year = st.number_input("Năm ra mắt", min_value=2000, max_value=2030, value=2021)
+    year = st.number_input("Năm ra mắt", min_value=2000, max_value=2030, value=2025)
     submit = st.form_submit_button("Dự đoán")
     if submit:
         input_data = np.array([[ram, storage, battery, camera, display, year]])
